@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  
+  --color-brand-purple: #A855F7;
+  --color-brand-dark: #0A0A0A;
+  --color-card-bg: #111111;
+  --color-border-subtle: #1F2937;
+  --color-text-main: #E5E7EB;
+  --color-text-muted: #9CA3AF;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-dark text-text-main antialiased selection:bg-brand-purple selection:text-white;
+  }
+  
+  h1, h2, h3, h4 {
+    @apply text-white;
+  }
+}
+
+.glass {
+  @apply backdrop-blur-md bg-white/[0.02] border border-border-subtle;
+}
+
+.card-elegant {
+  @apply bg-card-bg border border-border-subtle rounded-2xl transition-all duration-300;
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-white via-slate-300 to-brand-purple;
+}
+
+.sidebar-border {
+  @apply border-r border-border-subtle;
+}
